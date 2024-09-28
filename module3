@@ -1,0 +1,34 @@
+public class Bunny
+{
+    public string Name;
+    public BunnyDetails Details;
+
+    // Constructor accepting name and details with optional parameters
+    public Bunny(string name, bool likesCarrots = false, bool likesHumans = false)
+    {
+        Name = name;
+        Details = new BunnyDetails(likesCarrots, likesHumans);
+    }
+
+    // Nested class to hold additional details
+    public class BunnyDetails
+    {
+        public bool LikesCarrots;
+        public bool LikesHumans;
+        public BunnyDetails(bool likesCarrots = false, bool likesHumans = false)
+        {
+            LikesCarrots = likesCarrots;
+            LikesHumans = likesHumans;
+        }
+    }
+}
+
+// Example usage:
+Bunny b = new Bunny(
+    name: "Bo", 
+    likesCarrots: true);
+
+// Accessing properties
+Console.WriteLine($"Bunny Name: {b.Name}");
+Console.WriteLine($"Likes Carrots: {b.Details.LikesCarrots}");
+Console.WriteLine($"Likes Humans: {b.Details.LikesHumans}");
