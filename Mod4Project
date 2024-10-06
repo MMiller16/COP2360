@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Taking two string inputs
         Console.Write("Enter the first number: ");
         string input1 = Console.ReadLine();
 
@@ -26,7 +25,7 @@ class Program
             // Performing division
             int result = number1 / number2;
 
-            // Printing the result if no exceptions occur
+            // Printing the result
             Console.WriteLine($"Result: {result}");
         }
         catch (FormatException)
